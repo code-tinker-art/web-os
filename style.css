@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 92% 8%;
+}
+
+.screen {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.webos_taskbar{
+    background: #0072ff1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.webos_taskbar_input {
+    font-size: 16px;
+    height: 80%;
+    width: 350px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 15px 0px 10px;
+    caret-shape:block;
+}
+
+.suggestion {
+    height: 80%;
+    min-width: 0px;
+    background: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+}
