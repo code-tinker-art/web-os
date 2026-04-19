@@ -50,7 +50,7 @@ Web-OS/
 │   └── App_tester/       # App testing modules
 ├── javascript/           # Compiled JS output
 ├── typescript/           # TypeScript source files
-├── index.html            # Entry point — the Web-OS shell
+├── index.html            # Entry point — the Web-OS environment
 ├── style.css             # Global OS-like styles
 ├── server.js             # Node.js server to host the app
 └── README.md
@@ -67,13 +67,7 @@ git clone https://github.com/code-tinker-art/Web-OS.git
 cd Web-OS
 ```
 
-### 2. Install dependencies
-
-```bash
-npm install
-```
-
-### 3. Compile TypeScript
+### 2. Compile TypeScript
 
 If you make changes to the TypeScript source files, compile them:
 
@@ -83,13 +77,13 @@ tsc
 
 > Compiled output will be placed in the `javascript/` directory.
 
-### 4. Start the server
+### 3. Start the server
 
 ```bash
 node server.js
 ```
 
-### 5. Open in your browser
+### 4. Open in your browser
 
 Navigate to:
 
