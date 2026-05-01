@@ -1,0 +1,93 @@
+﻿<div class="br-root">
+
+    <!-- Titlebar with tabs -->
+    <div class="br-titlebar" data-drag>
+        <div class="br-titlebar-left">
+            <div class="br-btn br-btn-close"></div>
+            <div class="br-btn br-btn-min"></div>
+            <div class="br-btn br-btn-max"></div>
+        </div>
+        <div class="br-tab-strip-wrap">
+            <div class="br-tab-strip" id="br-tab-strip"></div>
+            <button class="br-new-tab-btn" id="br-new-tab-btn" title="New tab (Ctrl+T)">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="br-titlebar-right">
+            <button class="br-icon-btn-sm" id="br-sidebar-toggle" title="Toggle sidebar">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <rect x="1.5" y="1.5" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2" />
+                    <path d="M5 1.5v11" stroke="currentColor" stroke-width="1.2" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Toolbar: nav + address -->
+    <div class="br-toolbar">
+        <button class="br-nav-btn" id="br-back" title="Back (Alt+←)">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+        <button class="br-nav-btn" id="br-forward" title="Forward (Alt+→)">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+        <button class="br-nav-btn" id="br-reload" title="Reload (Ctrl+R)">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7A5 5 0 112 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /><path d="M12 3.5v3.5H8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+
+        <div class="br-address-wrap">
+            <span class="br-address-scheme" id="br-address-scheme">fs://</span>
+            <input class="br-address-bar" id="br-address-bar"
+                   placeholder="Search or enter URL / FS path"
+                   autocomplete="off" spellcheck="false" />
+        </div>
+
+        <button class="br-nav-btn br-bookmark-btn" id="br-bookmark-btn" title="Bookmark">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" id="br-bm-icon">
+                <path d="M3 2h8v10l-4-2.8L3 12V2z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <button class="br-nav-btn" id="br-icon-btn" title="Set tab icon">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.3" /><path d="M5 7l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+    </div>
+
+    <!-- Body -->
+    <div class="br-body">
+        <div class="br-sidebar" id="br-sidebar">
+            <div class="br-sidebar-sec">
+                <div class="br-sidebar-hdr">
+                    <span>BOOKMARKS</span>
+                    <button class="br-sidebar-clear" id="br-clear-bm" title="Clear all">✕</button>
+                </div>
+                <div id="br-bm-list"></div>
+            </div>
+            <div class="br-sidebar-divider"></div>
+            <div class="br-sidebar-sec">
+                <div class="br-sidebar-hdr">
+                    <span>HISTORY</span>
+                    <button class="br-sidebar-clear" id="br-clear-hist" title="Clear history">✕</button>
+                </div>
+                <div id="br-hist-list"></div>
+            </div>
+        </div>
+
+        <div class="br-pages" id="br-pages"></div>
+    </div>
+
+    <!-- Icon picker -->
+    <div class="br-modal hidden" id="br-icon-modal">
+        <div class="br-modal-box">
+            <div class="br-modal-title">Set Tab Icon</div>
+            <div class="br-modal-sub">Enter an emoji or 1–2 characters</div>
+            <input class="br-modal-input" id="br-icon-input" maxlength="4" placeholder="🌐" autocomplete="off" />
+            <div class="br-modal-btns">
+                <button class="br-modal-btn secondary" id="br-icon-cancel">Cancel</button>
+                <button class="br-modal-btn primary" id="br-icon-confirm">Set</button>
+            </div>
+        </div>
+    </div>
+
+</div>

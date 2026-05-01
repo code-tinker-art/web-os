@@ -43,5 +43,16 @@ export const apps = {
         jsPath: "/App/Filepad/filepad.js",
         classId: "filepad",
         addDragListener: true, resizable: true
+    },
+    "browser": {
+        name: "browser",
+        width: "780px", height: "520px",
+        minWidth: "480px", minHeight: "340px",
+        maxWidth: MAX_WIDTH, maxHeight: MAX_HEIGHT,
+        htmlPath: "/App/Browser/browser.html",
+        cssPath: "/App/Browser/browser.css",
+        jsPath: "/App/Browser/browser.js",
+        classId: "browser",
+        addDragListener: true, resizable: true
     }
 };
